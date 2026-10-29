@@ -1,0 +1,187 @@
+/* Original demonstration texts, narrated with es-MX-DaliaNeural (neural TTS). */
+const bookSamples = {
+  soledad: [
+    {
+      title: "Una puerta a la imaginación",
+      text: "En esta muestra de Ecualiapp exploramos el placer de escuchar una historia. Imagina un pueblo al caer la tarde. Las ventanas se iluminan, una conversación cruza el patio y alguien abre un cuaderno lleno de recuerdos. No estás escuchando el texto del libro, sino una presentación original para probar la voz sintética. Puedes pausar, cambiar la velocidad o elegir otra voz. Cada historia empieza con un pequeño gesto: prestar atención. Busca un lugar cómodo, ajusta el volumen y deja que las palabras te acompañen.",
+      audio: "./assets/audio/soledad-1.mp3",
+      duration: 40.992,
+    },
+  ],
+  viento: [
+    {
+      title: "Historias junto al camino",
+      text: "Esta es una presentación original de Ecualiapp para probar la narración, no un fragmento del libro. Imagina una posada al final de un camino. Afuera sopla el viento; dentro, una lámpara ilumina una mesa de madera. Un viajero deja su abrigo, pide agua y comienza a contar una historia. Nadie sabe todavía adónde llevará su relato. Escuchar tiene algo de ese encuentro: no hace falta apresurarse ni conocer el final. Puedes detener la voz, volver atrás o cambiar su ritmo. La próxima palabra llegará cuando estés preparado.",
+      audio: "./assets/audio/viento-1.mp3",
+      duration: 43.2,
+    },
+  ],
+  sombra: [
+    {
+      title: "Una ciudad de historias",
+      text: "Esta presentación original de Ecualiapp acompaña al catálogo de demostración y no reproduce el texto del libro. Piensa en una ciudad después de la lluvia. Las luces se reflejan sobre el suelo y una librería permanece abierta en una calle tranquila. Alguien busca una historia sin saber que también busca una pregunta. Cada voz puede cambiar la forma de imaginar ese lugar. Prueba los controles, escucha una frase de nuevo y descubre el ritmo que te resulta más cómodo. Esta muestra está pensada para que elijas cómo quieres escuchar.",
+      audio: "./assets/audio/sombra-1.mp3",
+      duration: 40.272,
+    },
+  ],
+  dune: [
+    {
+      title: "Un horizonte por descubrir",
+      text: "Bienvenido a una muestra original de voz sintética de Ecualiapp. No es una lectura del libro del catálogo. Imagina un horizonte de arena, una noche despejada y un grupo de viajeros que se detiene para observar las estrellas. El viaje continúa mañana, pero ahora hay tiempo para escuchar. Las historias de mundos lejanos nos invitan a pensar en nuestras propias decisiones. Puedes elegir una voz disponible en tu dispositivo, ajustar la velocidad o guardar un marcador. El sonido que escuchas se genera a partir de un texto de demostración.",
+      audio: "./assets/audio/dune-1.mp3",
+      duration: 41.544,
+    },
+  ],
+  sapiens: [
+    {
+      title: "Preguntas alrededor del fuego",
+      text: "Esta es una presentación original para probar la voz de Ecualiapp, no un fragmento de la obra. Imagina a varias personas reunidas alrededor de un fuego. Comparten alimentos, comparan lo que han aprendido y hacen preguntas sobre el mundo. Miles de años después, seguimos encontrándonos a través de las palabras. Escuchar una explicación puede abrir una conversación nueva. ¿Qué damos por hecho? ¿Qué nos gustaría comprender mejor? Usa esta muestra para probar el volumen, el avance y la velocidad antes de elegir tu próxima historia.",
+      audio: "./assets/audio/sapiens-1.mp3",
+      duration: 42.504,
+    },
+  ],
+  pedro: [
+    {
+      title: "El camino de las voces",
+      text: "Esta muestra de Ecualiapp utiliza un texto original de presentación y no reproduce el contenido del libro. Imagina un camino tranquilo que atraviesa un paisaje al atardecer. A lo lejos se distingue un grupo de casas y, con el viento, llegan voces de una conversación. Cada recuerdo cambia un poco cuando lo contamos. Cada persona escucha desde un lugar distinto. La narración permite acercarse despacio a esas diferencias. Puedes guardar este momento, volver a una frase anterior o dejar que la muestra termine. Esta voz sintética está aquí para ayudarte a probar el reproductor.",
+      audio: "./assets/audio/pedro-1.mp3",
+      duration: 44.64,
+    },
+  ],
+  ficciones: [
+    {
+      title: "Un mapa de posibilidades",
+      text: "Estás escuchando una presentación original del template Ecualiapp, no una lectura del libro. Imagina una biblioteca con una puerta en cada esquina. Detrás de cada puerta hay un camino distinto, una pregunta nueva y una forma de mirar lo que parecía conocido. A veces, una historia breve puede ampliar mucho nuestro mundo. Esta muestra permite comprobar cómo suenan las palabras con diferentes voces y velocidades. Elige una voz en el selector del reproductor, guarda un marcador si quieres volver a este punto y continúa explorando el catálogo.",
+      audio: "./assets/audio/ficciones-1.mp3",
+      duration: 41.352,
+    },
+  ],
+  "sombra-japon": [
+    {
+      title: "La luz en una habitación",
+      text: "Esta es una muestra original de voz sintética para probar Ecualiapp. No reproduce el texto de la obra del catálogo. Piensa en una habitación al final de la tarde. La luz entra despacio, se detiene sobre una mesa y deja algunas esquinas en penumbra. No hace falta encender todas las lámparas. A veces basta con observar cómo cambian los detalles cuando bajamos el ritmo. Busca una postura cómoda y escucha el espacio entre las frases. Puedes reducir la velocidad de la voz o activar el temporizador para acompañar un momento de descanso.",
+      audio: "./assets/audio/sombra-japon-1.mp3",
+      duration: 42.504,
+    },
+  ],
+  meditaciones: [
+    {
+      title: "Un momento para respirar",
+      text: "Esta presentación de Ecualiapp es un texto original para escuchar con calma. No pertenece a una obra del catálogo. Deja por un momento la tarea que tienes entre manos. Apoya los pies, afloja los hombros y permite que la respiración encuentre su ritmo habitual. No necesitas resolver todo ahora. Puedes elegir una sola cosa pequeña a la que prestar atención: el aire de la habitación, una luz cercana o el peso de tus manos. Cuando estés listo, retoma tu camino con un poco más de espacio. El día puede continuar sin que tengas que correr detrás de cada pensamiento.",
+      audio: "./assets/audio/meditaciones-1.mp3",
+      duration: 44.4,
+    },
+  ],
+  faro: [
+    {
+      title: "La llave de cobre",
+      text: "Inés llegó a la isla con una maleta pequeña y una llave de cobre. El barco se alejó antes de que pudiera despedirse. Frente a ella, la escalera del puerto subía entre casas blancas hasta un faro apagado. Hacía doce años que no lo veía. En el bolsillo llevaba una carta de su abuela. No decía mucho: abre las ventanas, limpia los cristales y espera a la marea. Inés sonrió. Su abuela siempre había dado instrucciones como si preparara una sopa. Subió despacio, contando los escalones. Al llegar a la puerta descubrió que la llave seguía girando sin esfuerzo. Dentro olía a madera, sal y algo parecido al comienzo de una historia.",
+      audio: "./assets/audio/faro-1.mp3",
+      duration: 52.224,
+    },
+    {
+      title: "La ventana del norte",
+      text: "Durante la tarde, Inés limpió la ventana que miraba al norte. El polvo dibujaba pequeños remolinos sobre el suelo. Detrás de una caja encontró un cuaderno lleno de nombres de barcos. Cada nombre tenía una fecha y una frase. Mar tranquilo. Viento del este. Regresaron todos. No era un registro del faro: era el diario de una persona que había esperado a otras personas. Inés se sentó junto al cristal. Recordó las manos de su abuela, siempre ocupadas, y comprendió que encender una luz también podía ser una manera de cuidar. Afuera, la marea comenzó a bajar. Entre las rocas apareció un camino que no recordaba.",
+      audio: "./assets/audio/faro-2.mp3",
+      duration: 52.392,
+    },
+    {
+      title: "Una luz para volver",
+      text: "El camino terminaba en una piedra lisa. Allí había una caja de metal con otra carta. Esta vez solo decía: no tienes que quedarte, pero siempre puedes volver. Inés permaneció un rato mirando el agua. Había viajado convencida de que debía tomar una decisión para siempre. La isla, en cambio, le ofrecía algo mucho más sencillo: una puerta abierta. Cuando regresó al faro ya oscurecía. Ajustó el interruptor y la lámpara respondió con un zumbido suave. El primer círculo de luz recorrió el mar. En el puerto, alguien levantó una mano. Inés abrió las ventanas. Por primera vez en mucho tiempo, la noche le pareció un lugar familiar.",
+      audio: "./assets/audio/faro-3.mp3",
+      duration: 53.832,
+    },
+  ],
+  "biblioteca-horas": [
+    {
+      title: "Entre dos campanadas",
+      text: "Tomás reparaba relojes en una calle donde casi nadie preguntaba la hora. Una tarde recibió un reloj sin agujas y una nota: entréguelo antes de medianoche. La dirección lo condujo hasta una puerta estrecha entre una panadería y un edificio vacío. Cuando el campanario dio la primera campanada, la puerta se abrió. Al otro lado había una biblioteca iluminada con lámparas verdes. Una mujer ordenaba libros detrás de un mostrador. Llegas a tiempo, dijo, y señaló una mesa. Tomás dejó el reloj sobre ella. Desde algún lugar llegó el sonido de una página que se pasaba sola. La segunda campanada todavía no había sonado.",
+      audio: "./assets/audio/biblioteca-horas-1.mp3",
+      duration: 50.424,
+    },
+    {
+      title: "El estante de los martes",
+      text: "La mujer lo guio hasta un estante marcado con la palabra martes. Aquí guardamos momentos pequeños, explicó. Un saludo que no se dio. Una conversación interrumpida. Una tarde en la que alguien miró por la ventana sin prisa. Tomás abrió un libro delgado. En sus páginas encontró el dibujo de la mesa de su padre y, junto a ella, una silla vacía. Recordó que llevaba semanas prometiendo una visita. Quiso arrancar la página, pero la bibliotecaria negó con la cabeza. Los recuerdos no se llevan, dijo. Lo que puedes llevarte es la decisión de hacer algo con ellos. Entonces el reloj sin agujas comenzó a funcionar.",
+      audio: "./assets/audio/biblioteca-horas-2.mp3",
+      duration: 51.912,
+    },
+    {
+      title: "La hora que faltaba",
+      text: "Tomás salió de la biblioteca justo cuando terminó de sonar la segunda campanada. La calle seguía igual. La panadería estaba cerrada y la puerta estrecha había desaparecido. En su mano quedaba el reloj, ahora con dos agujas diminutas. Marcaba las cinco de la tarde. Tomás miró su teléfono y descubrió que todavía tenía tiempo de tomar el último autobús. Al llegar a casa de su padre no había preparado ninguna frase especial. Solo llamó a la puerta. Su padre abrió, sorprendido, y apartó una silla de la mesa. Se sentaron a conversar. Por una vez, Tomás no miró el reloj. La hora que faltaba estaba ocurriendo allí.",
+      audio: "./assets/audio/biblioteca-horas-3.mp3",
+      duration: 52.896,
+    },
+  ],
+  "jardin-luna": [
+    {
+      title: "Una semilla bajo el cristal",
+      text: "En la estación lunar, el amanecer llegaba con un botón. Ada prefería encender las luces poco a poco, como si el cielo necesitara desperezarse. Aquella mañana llevó una semilla hasta el invernadero. Preparó la tierra con las manos, dejó un hueco pequeño y la cubrió con cuidado. A través del cristal se veía una llanura de polvo gris. Muy lejos, la Tierra parecía una lámpara azul. Ada acercó un vaso de agua y dejó caer unas gotas. No había nada que hacer de inmediato. Esa era la parte que más le gustaba de plantar: recordar que algunas cosas necesitan tiempo, silencio y una atención tranquila.",
+      audio: "./assets/audio/jardin-luna-1.mp3",
+      duration: 49.344,
+    },
+    {
+      title: "El sonido del agua",
+      text: "Los días siguientes tuvieron una rutina sencilla. Ada revisaba la humedad de la tierra, limpiaba el cristal y se sentaba cerca de la maceta. El sistema de riego producía un sonido suave, parecido a una lluvia lejana. Una tarde, mientras escuchaba el agua, vio un punto verde. Era tan pequeño que pudo haberlo confundido con una sombra. Se acercó sin tocarlo. Dos hojas diminutas sostenían toda la promesa de un jardín. Ada respiró despacio y dejó el cuaderno abierto sobre la mesa. Escribió una sola línea: hoy apareció algo que ayer no estaba. Después apagó la pantalla y se quedó mirando las hojas un rato más.",
+      audio: "./assets/audio/jardin-luna-2.mp3",
+      duration: 50.16,
+    },
+    {
+      title: "La primera sombra verde",
+      text: "Con el paso de las semanas, la planta creció hacia la luz. Su primera sombra cayó sobre la mesa como una mano pequeña. Ada colocó una segunda maceta a su lado. Ya no pensaba en construir un jardín entero de una vez. Le bastaba con acompañar cada nuevo brote. Esa noche invitó a sus compañeros a sentarse en el invernadero. Nadie habló durante unos minutos. Escucharon el agua, observaron la Tierra y descansaron. En una estación llena de pantallas, aquel rincón ofrecía algo distinto: una vida que crecía a su propio ritmo. Antes de irse, Ada bajó un poco las luces. Mañana habría tiempo para una semilla más.",
+      audio: "./assets/audio/jardin-luna-3.mp3",
+      duration: 52.248,
+    },
+  ],
+};
+books.unshift(
+  ...[
+    {
+      id: "faro",
+      title: "El faro de las mareas",
+      category: "Ficción",
+      synopsis:
+        "Inés vuelve a la isla donde creció para recuperar un faro olvidado. Tres noches, una carta y una luz encendida bastarán para cambiar la forma en que recuerda su hogar. Relato original de ejemplo para probar la narración.",
+      author: "Ecualiapp · Relato original",
+      narrator: "Dalia · Español latino",
+      cover: "./assets/faro.svg",
+      duration: 3,
+      rating: "Nuevo",
+      progress: 0,
+      downloaded: false,
+      favorite: false,
+      isExample: true,
+    },
+    {
+      id: "biblioteca-horas",
+      title: "La biblioteca de las horas",
+      category: "Suspense",
+      synopsis:
+        "Un relojero descubre una biblioteca que solo abre entre dos campanadas. Allí, los libros guardan pequeños momentos que alguien estuvo a punto de olvidar. Relato original de ejemplo en tres capítulos.",
+      author: "Ecualiapp · Relato original",
+      narrator: "Dalia · Español latino",
+      cover: "./assets/biblioteca-horas.svg",
+      duration: 3,
+      rating: "Nuevo",
+      progress: 0,
+      downloaded: false,
+      favorite: false,
+      isExample: true,
+    },
+    {
+      id: "jardin-luna",
+      title: "Un jardín en la luna",
+      category: "Bienestar & Sueño",
+      synopsis:
+        "Una jardinera planta la primera semilla en una estación lunar. Un paseo tranquilo entre ventanas, agua y hojas nuevas, pensado para escuchar con calma. Relato original de ejemplo en tres capítulos.",
+      author: "Ecualiapp · Relato original",
+      narrator: "Dalia · Español latino",
+      cover: "./assets/jardin-luna.svg",
+      duration: 3,
+      rating: "Nuevo",
+      progress: 0,
+      downloaded: false,
+      favorite: false,
+      isExample: true,
+    },
+  ],
+);

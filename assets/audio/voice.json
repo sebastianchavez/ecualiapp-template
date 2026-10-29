@@ -1,0 +1,7 @@
+{
+  "engine": "Microsoft neural TTS",
+  "voice": "es-MX-DaliaNeural",
+  "language": "es-MX",
+  "rate": "-10%",
+  "chapters": 18
+}

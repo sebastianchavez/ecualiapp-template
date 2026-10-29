@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#141312" />
+    <meta
+      name="description"
+      content="Tu próxima historia empieza al escuchar. Explora, guarda y disfruta audiolibros en Ecualiapp."
+    />
+    <title>Explorar · Ecualiapp</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <div id="app"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+
+    <script defer src="./js/data/assets.js"></script>
+    <script defer src="./js/data/books.js"></script>
+    <script defer src="./js/data/samples.js"></script>
+    <script defer src="./js/components/shared/icons.js"></script>
+    <script defer src="./js/components/shared/ui.js"></script>
+    <script defer src="./js/audio/narration.js"></script>
+    <script defer src="./js/state/store.js"></script>
+    <script defer src="./js/components/pages/explore.js"></script>
+    <script defer src="./js/components/pages/library.js"></script>
+    <script defer src="./js/components/pages/book-detail.js"></script>
+    <script defer src="./js/components/pages/player.js"></script>
+    <script defer src="./js/components/pages/profile.js"></script>
+    <script defer src="./js/components/shared/layout.js"></script>
+    <script defer src="./js/main.js"></script>
+  </body>
+</html>

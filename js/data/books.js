@@ -1,0 +1,145 @@
+const synopsis =
+  "Una historia que te invita a detener el tiempo y dejarte llevar por la voz de su narrador. Personajes inolvidables, lugares llenos de misterio y palabras que permanecen contigo mucho después del último capítulo.";
+const books = [
+  {
+    id: "soledad",
+    title: "Cien años de soledad",
+    author: "Gabriel García Márquez",
+    narrator: "Francisco Rivela",
+    cover: assets.solitude,
+    category: "Ficción",
+    duration: 900,
+    rating: "4.9",
+    progress: 68,
+    downloaded: true,
+    favorite: true,
+    synopsis:
+      "La historia de la familia Buendía a lo largo de siete generaciones en el pueblo de Macondo. Un universo donde lo cotidiano y lo extraordinario se entrelazan, y donde el amor, la memoria y la soledad atraviesan el tiempo.",
+  },
+  {
+    id: "viento",
+    title: "El nombre del viento",
+    author: "Patrick Rothfuss",
+    narrator: "Raúl Llorens",
+    cover: assets.wind,
+    category: "Ficción",
+    duration: 1695,
+    rating: "4.9",
+    progress: 0,
+    downloaded: false,
+    favorite: false,
+    synopsis:
+      "He robado princesas a reyes agónicos. Incendié la ciudad de Trebon. He pasado la noche con Felurian y he despertado vivo y cuerdo. Fui expulsado de la Universidad a una edad a la que a la mayoría todavía no los dejan entrar. Me llamo Kvothe. Quizá hayas oído hablar de mí.",
+  },
+  {
+    id: "sombra",
+    title: "La sombra del viento",
+    author: "Carlos Ruiz Zafón",
+    narrator: "Jordi Boixaderas",
+    cover: assets.shadow,
+    category: "Suspense",
+    duration: 1112,
+    rating: "4.9",
+    progress: 88,
+    downloaded: true,
+    favorite: true,
+    synopsis,
+  },
+  {
+    id: "dune",
+    title: "Dune",
+    author: "Frank Herbert",
+    narrator: "David Robles",
+    cover: assets.dune,
+    category: "Ciencia Ficción",
+    duration: 1262,
+    rating: "4.8",
+    progress: 100,
+    downloaded: false,
+    favorite: false,
+    synopsis,
+  },
+  {
+    id: "sapiens",
+    title: "Sapiens",
+    author: "Yuval Noah Harari",
+    narrator: "Pere Molina",
+    cover: assets.sapiens,
+    category: "Historia",
+    duration: 918,
+    rating: "4.9",
+    progress: 100,
+    downloaded: false,
+    favorite: false,
+    synopsis,
+  },
+  {
+    id: "pedro",
+    title: "Pedro Páramo",
+    author: "Juan Rulfo",
+    narrator: "Tenoch Huerta",
+    cover: assets.pedro,
+    category: "Ficción",
+    duration: 285,
+    rating: "4.7",
+    progress: 15,
+    downloaded: false,
+    favorite: false,
+    synopsis,
+  },
+  {
+    id: "ficciones",
+    title: "Ficciones",
+    author: "Jorge Luis Borges",
+    narrator: "Hernán Romero",
+    cover: assets.ficciones,
+    category: "Ficción",
+    duration: 580,
+    rating: "4.8",
+    progress: 42,
+    downloaded: true,
+    favorite: false,
+    synopsis,
+  },
+  {
+    id: "sombra-japon",
+    title: "El elogio de la sombra",
+    author: "Junichiro Tanizaki",
+    narrator: "Clara Lago",
+    cover: assets.shade,
+    category: "Bienestar & Sueño",
+    duration: 134,
+    rating: "4.8",
+    progress: 0,
+    downloaded: false,
+    favorite: false,
+    synopsis,
+  },
+  {
+    id: "meditaciones",
+    title: "Meditaciones nocturnas",
+    author: "Marco Aurelio",
+    narrator: "Manolo Solo",
+    cover: assets.meditations,
+    category: "Filosofía",
+    duration: 220,
+    rating: "4.9",
+    progress: 0,
+    downloaded: false,
+    favorite: false,
+    synopsis,
+  },
+];
+function chaptersFor(id) {
+  return bookSamples[id] || [];
+}
+const formatDuration = (minutes) =>
+  `${Math.floor(minutes / 60)
+    .toString()
+    .padStart(2, "0")}h ${(minutes % 60).toString().padStart(2, "0")}m`;
+const formatTime = (seconds) =>
+  `${Math.floor(seconds / 60)
+    .toString()
+    .padStart(2, "0")}:${Math.floor(seconds % 60)
+    .toString()
+    .padStart(2, "0")}`;
